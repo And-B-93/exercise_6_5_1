@@ -1,0 +1,166 @@
+@use 'helpers' as *;
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+//скрывает левое меню
+.visible-laptop {
+  @include tablet-max {
+    @include visually-hidden;
+  }
+}
+//
+
+//скрывает кнопки в хедере
+.interactiv-buttons__visible-laptop {
+  @include tablet-max {
+    display: none !important;
+  }
+}
+//
+
+// скрывает хедер с интерактивными кнопками для разрешения меньше, чем у ноута
+.hidden-laptop {
+  @include laptop {
+    @include visually-hidden;
+  }
+}
+//
+
+// скрывает центральные кнопки в хедере
+.hidden-mobile {
+  @include mobile-max {
+    @include visually-hidden;
+  }
+}
+
+// меняет отступы между кнопками для мобильной версии
+.interactiv-group {
+  @include mobile-max {
+    column-gap: var(--column-gap-mobile) !important;
+    padding-left: var(--padding-left-mobile) !important;
+
+    .repair-check {
+      column-gap: var(--column-gap-mobile) !important;
+    }
+  }
+}
+//
+
+.visible-tablet {
+  @include tablet-max {
+    @include scrol-menu;
+  }
+}
+
+.visible-mobile {
+  @include mobile-max {
+    @include main-info;
+  }
+}
+
+.swiper-block-mobile {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.block-desktop,
+.button-show-more {
+  @include mobile-max {
+    display: none !important;
+  }
+}
+
+.swiper-block-mobile {
+  @include mobile-max {
+    @include swiper-block-mobile;
+  }
+}
+
+.brand-list {
+  @include mobile-max {
+    height: 220px;
+  }
+}
+
+.tech-list {
+  @include mobile-max {
+    height: 320px;
+  }
+}
+
+.common-info {
+  @include mobile-max {
+    display: flex !important;
+    flex-direction: column !important;
+
+    .marketing {
+      width: 100% !important;
+      text-align: center !important;
+      margin-bottom: 16px !important;
+    }
+
+    .rules {
+      width: 100% !important;
+      text-align: center !important;
+      margin-bottom: 16px !important;
+    }
+
+    .oferta {
+      width: 100% !important;
+      text-align: center !important;
+      margin-bottom: 16px !important;
+    }
+  }
+}
+
+.button {
+  @include mobile {
+    position: static !important;
+  }
+
+  @include mobile-alt {
+    position: static !important;
+  }
+}
+
+.description-price-container {
+  @include mobile-max {
+    display: none !important;
+  }
+}
+
+.menu {
+  @include laptop {
+    height: 900px !important;
+  }
+  @include tablet-max {
+    height: 100% !important;
+  }
+}
+
+.feedback__wrapper form,
+.callback__wrapper form {
+  @include mobile-max {
+    width: 100% !important;
+  }
+  @include mobile-alt-min {
+    width: 440px !important;
+  }
+}
+
+.equip-list {
+  @include mobile-max {
+    &::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 5%;
+      left: 95%;
+      z-index: 100;
+      background: linear-gradient(90deg, rgba(63, 6, 6, 0) 1%, #f8f8f8 100%);
+    }
+  }
+}

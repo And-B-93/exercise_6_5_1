@@ -1,0 +1,42 @@
+@use 'helpers' as *;
+
+:root {
+  --color-turquoise: #41f6d7;
+  --color-grey: #7e7e82;
+  --color-grey-alt: #eaeaea;
+  --color-black-alt: #1b1c21;
+  --color-background-btn: white;
+  --color-background-main: #f8f8f8;
+  --color-background-main-alt: rgb(255, 253, 253, 0.9);
+  --color-box-shadow: rgb(139, 40, 95);
+  --color-text: #ff3e79;
+
+  --font-family-base: 'TT Lakes', sasn-serif;
+  --font-family-alt: 'TT Lakes Condensed', sasn-serif;
+  --font-size-main: 16px;
+  --font-size-big: 28px;
+  --font-size-small: 14px;
+
+  --conteiner-width: 900px;
+  --conteiner-padding-x: 25px;
+
+  --button-height: 40px;
+  --button-width: 40px;
+  --border-radius-btn: 50%;
+  --border-radius-frame: 5px;
+  --border-radius-btn-order: 15px;
+
+  --border-out: none;
+
+  --transition-duration: 0.2s;
+
+  --padding-left: 20px;
+  --padding-left-mobile: 8px;
+  --padding-top: 20px;
+  --margin-out-btn: 8px 8px;
+
+  --column-gap: 20px;
+  --column-gap-mobile: 10px;
+
+  --box-shadow-animation: 0 0 6px 5px var(--color-box-shadow);
+}
