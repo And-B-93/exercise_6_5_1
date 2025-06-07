@@ -41,12 +41,11 @@
 }
 
 @mixin swiper-block-mobile {
-  background-color: var(--color-background-main) !important;
   overflow: hidden !important;
   height: 100%;
 
   .swiper-container {
-    width: 81.25% !important;
+    width: 81.25vw !important;
 
     .swiper-wrapper {
       .swiper-slide {

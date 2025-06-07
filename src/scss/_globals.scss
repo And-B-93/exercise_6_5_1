@@ -183,6 +183,7 @@ button {
 
 main {
   width: 100%;
+  background-color: var(--color-background-main);
 
   .interactiv-group {
     display: flex;
@@ -193,6 +194,7 @@ main {
     padding-left: var(--padding-left);
     padding-top: var(--padding-top);
     border-bottom: 1px solid var(--color-turquoise);
+    background-color: var(--color-background-btn) !important;
 
     &__divider-left {
       border: 1px solid var(--color-grey-alt);
@@ -376,10 +378,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-background-main);
   border: var(--border-out);
   font-size: var(--font-size-main);
   font-family: var(--font-family-base);
+  background-color: var(--color-background-main);
 
   &--reverse {
     height: 24px;
@@ -467,11 +469,11 @@ main {
 
     .button-offer {
       display: inline-block;
-      background-color: var(--color-background-main);
       border: var(--border-out);
       font-size: var(--font-size-main);
       font-family: var(--font-family-base);
       text-align: left;
+      background-color: var(--color-background-main);
 
       span {
         padding: 0 10px 0 0;
@@ -633,7 +635,8 @@ main {
       height: 100%;
       padding-top: var(--padding-top);
       padding-left: var(--padding-left);
-      box-shadow: 0 0 50px 5px rgba(37, 37, 37, 0.815);
+      padding-right: var(--padding-right);
+      border-left: var(--color-turquoise);
 
       .button {
         position: absolute;
@@ -664,14 +667,14 @@ main {
 
       input {
         height: 50px;
-        width: 376px;
+        width: 100%;
         border: 1px solid var(--color-grey-alt);
         border-radius: 8px;
         margin-bottom: 16px;
 
         &[name='message'] {
           height: 120px;
-          width: 376px;
+          width: 100%;
 
           &::placeholder {
             vertical-align: text-top;
