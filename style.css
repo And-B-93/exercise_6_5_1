@@ -823,43 +823,41 @@ main {
     width: 100%;
     border: 1px solid var(--color-grey-alt);
     border-radius: 8px;
-    margin-bottom: 16px; }
-    .feedback__wrapper form input[name='message'],
-    .callback__wrapper form input[name='message'] {
-      height: 120px;
-      width: 100%; }
-      .feedback__wrapper form input[name='message']::-webkit-input-placeholder,
-      .callback__wrapper form input[name='message']::-webkit-input-placeholder {
-        vertical-align: text-top; }
-      .feedback__wrapper form input[name='message']::-moz-placeholder,
-      .callback__wrapper form input[name='message']::-moz-placeholder {
-        vertical-align: text-top; }
-      .feedback__wrapper form input[name='message']:-ms-input-placeholder,
-      .callback__wrapper form input[name='message']:-ms-input-placeholder {
-        vertical-align: text-top; }
-      .feedback__wrapper form input[name='message']::placeholder,
-      .callback__wrapper form input[name='message']::placeholder {
-        vertical-align: text-top; }
+    margin-bottom: 16px;
+    padding: 5px; }
     .feedback__wrapper form input::-webkit-input-placeholder,
     .callback__wrapper form input::-webkit-input-placeholder {
       font-family: var(--font-family-base);
       font-size: var(--font-size-main);
-      color: var(--color-grey); }
+      color: var(--color-grey);
+      padding-left: 5px; }
     .feedback__wrapper form input::-moz-placeholder,
     .callback__wrapper form input::-moz-placeholder {
       font-family: var(--font-family-base);
       font-size: var(--font-size-main);
-      color: var(--color-grey); }
+      color: var(--color-grey);
+      padding-left: 5px; }
     .feedback__wrapper form input:-ms-input-placeholder,
     .callback__wrapper form input:-ms-input-placeholder {
       font-family: var(--font-family-base);
       font-size: var(--font-size-main);
-      color: var(--color-grey); }
+      color: var(--color-grey);
+      padding-left: 5px; }
     .feedback__wrapper form input::placeholder,
     .callback__wrapper form input::placeholder {
       font-family: var(--font-family-base);
       font-size: var(--font-size-main);
-      color: var(--color-grey); }
+      color: var(--color-grey);
+      padding-left: 5px; }
+  .feedback__wrapper form textarea,
+  .callback__wrapper form textarea {
+    border: 1px solid var(--color-grey-alt);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-main);
+    color: var(--color-grey);
+    padding-left: 5px;
+    height: 120px;
+    width: 100%; }
 
 .feedback__wrapper .content__style,
 .callback__wrapper .content__style {
