@@ -631,7 +631,6 @@ main {
       background-color: var(--color-background-main);
       position: absolute;
       right: 0;
-
       height: 100%;
       padding-top: var(--padding-top);
       padding-left: var(--padding-left);
@@ -671,21 +670,24 @@ main {
         border: 1px solid var(--color-grey-alt);
         border-radius: 8px;
         margin-bottom: 16px;
-
-        &[name='message'] {
-          height: 120px;
-          width: 100%;
-
-          &::placeholder {
-            vertical-align: text-top;
-          }
-        }
+        padding: 5px;
 
         &::placeholder {
           font-family: var(--font-family-base);
           font-size: var(--font-size-main);
           color: var(--color-grey);
+          padding-left: 5px;
         }
+      }
+
+      textarea {
+        border: 1px solid var(--color-grey-alt);
+        font-family: var(--font-family-base);
+        font-size: var(--font-size-main);
+        color: var(--color-grey);
+        padding-left: 5px;
+        height: 120px;
+        width: 100%;
       }
     }
     .content {
