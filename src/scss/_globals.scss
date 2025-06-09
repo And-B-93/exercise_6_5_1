@@ -34,6 +34,8 @@ button {
     padding-left: var(--padding-left);
     padding-top: var(--padding-top);
     background-color: var(--color-background-btn);
+    position: sticky;
+    top: 0;
 
     &--modal-menu {
       box-shadow: 0 0 50px -5px rgba(37, 37, 37, 0.815);
