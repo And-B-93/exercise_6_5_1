@@ -48,9 +48,9 @@
 }
 //
 
-.visible-tablet {
+.scrol-menu--visible-tablet {
   @include tablet-max {
-    @include scrol-menu;
+    @include scrol-menu--visible-tablet;
   }
 }
 
@@ -81,13 +81,13 @@
 
 .brand-list {
   @include mobile-max {
-    height: 220px;
+    height: auto;
   }
 }
 
 .tech-list {
   @include mobile-max {
-    height: 320px;
+    height: auto;
   }
 }
 
@@ -116,7 +116,7 @@
   }
 }
 
-.button {
+.button--burger-close-callback, .button--burger-close-feedback {
   @include mobile {
     position: static !important;
   }
@@ -153,6 +153,7 @@
 
 .equip-list {
   @include mobile-max {
+    position: relative;
     &::before {
       position: absolute;
       content: '';
@@ -160,7 +161,29 @@
       width: 5%;
       left: 95%;
       z-index: 100;
-      background: linear-gradient(90deg, rgba(63, 6, 6, 0) 1%, #f8f8f8 100%);
+      background: linear-gradient(90deg,rgba(248, 248, 248, 0) 0%, rgba(248, 248, 248, 0.63) 50%, rgba(248, 248, 248, 1) 100%);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 5%;
+      right: 95%;
+      z-index: 100;
+      background: linear-gradient(90deg,rgba(248, 248, 248, 1) 0%, rgba(248, 248, 248, 0.63) 50%, rgba(248, 248, 248, 0) 100%);
     }
   }
+}
+
+.button--burger-close-callback {
+  @include button--burger-close-callback;
+}
+
+.button--burger-close-feedback {
+  @include button--burger-close-feedback;
+}
+
+form .submit, .time__description .submit {
+  @include submit
 }

@@ -2,6 +2,50 @@ import '../scss/style.scss'
 
 console.log('Works!')
 
+// меню
+
+let popup = document.querySelector('.menu-wrapper')
+let transparentClickMenu = popup.querySelector('.transparent')
+
+let openPopupButton = document.querySelector('.btn-menu')
+let closePopupButton = popup.querySelector('.button--burger-close')
+
+let menu = document.querySelector('.menu')
+let body = document.querySelector('body')
+
+openPopupButton.addEventListener('click', function (evt) {
+  evt.preventDefault()
+  popup.classList.add('menu-wrapper--modal-show')
+  closePopupButton.classList.remove('visually-hidden')
+  menu.classList.add('menu--modal-menu')
+  body.style.overflow = 'hidden'
+})
+
+closePopupButton.addEventListener('click', function () {
+  popup.classList.remove('menu-wrapper--modal-show')
+  closePopupButton.classList.add('visually-hidden')
+  menu.classList.remove('menu--modal-menu')
+  body.style.overflow = 'auto'
+})
+
+document.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    popup.classList.remove('menu-wrapper--modal-show')
+    closePopupButton.classList.add('visually-hidden')
+    menu.classList.remove('menu--modal-menu')
+    body.style.overflow = 'auto'
+  }
+})
+
+transparentClickMenu.addEventListener('click', function () {
+  popup.classList.remove('menu-wrapper--modal-show')
+  closePopupButton.classList.add('visually-hidden')
+  menu.classList.remove('menu--modal-menu')
+  body.style.overflow = 'auto'
+})
+
+//модальные окна
+
 let popupFeedback = document.querySelector('.feedback')
 let popupCallback = document.querySelector('.callback')
 
@@ -14,6 +58,9 @@ let closePopupButtonFeedback = popupFeedback.querySelector(
 let closePopupButtonCallback = popupCallback.querySelector(
   '.button--burger-close-callback'
 )
+
+let transparentClickFeedback = popupFeedback.querySelector('.transparent')
+let transparentClickCallback = popupCallback.querySelector('.transparent')
 
 for (let i = 0; i < openPopupButtonFeedback.length; i++) {
   openPopupButtonFeedback[i].addEventListener('click', function (evt) {
@@ -31,6 +78,12 @@ for (let i = 0; i < openPopupButtonFeedback.length; i++) {
     popupFeedback.classList.add('visually-hidden')
     body.style.overflow = 'auto'
   })
+
+  transparentClickFeedback.addEventListener('click', function () {
+    popupFeedback.classList.remove('feedback--modal-show')
+    popupFeedback.classList.add('visually-hidden')
+    body.style.overflow = 'auto'
+})
 }
 
 for (let i = 0; i < openPopupButtonCallback.length; i++) {
@@ -49,14 +102,23 @@ for (let i = 0; i < openPopupButtonCallback.length; i++) {
     popupCallback.classList.add('visually-hidden')
     body.style.overflow = 'auto'
   })
+
+  transparentClickCallback.addEventListener('click', function () {
+    popupCallback.classList.remove('callback--modal-show')
+    popupCallback.classList.add('visually-hidden')
+    body.style.overflow = 'auto'
+  })
 }
 
+//свайпер
 new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true
   }
 })
+
+//покажи мне ВСЁ
 
 let desktop = document.querySelectorAll('.blocks-desktop')
 let isShow = false
@@ -102,44 +164,4 @@ btnReedMore.addEventListener('click', function () {
     textBtnReedMore.innerHTML = 'Скрыть'
   }
   isShow = !isShow
-})
-
-let popup = document.querySelector('.menu-wrapper')
-let transparentClick = document.querySelector('.transparent')
-
-let openPopupButton = document.querySelector('.btn-menu')
-let closePopupButton = popup.querySelector('.button--burger-close')
-
-let menu = document.querySelector('.menu')
-let body = document.querySelector('body')
-
-openPopupButton.addEventListener('click', function (evt) {
-  evt.preventDefault()
-  popup.classList.add('menu-wrapper--modal-show')
-  closePopupButton.classList.remove('visually-hidden')
-  menu.classList.add('menu--modal-menu')
-  body.style.overflow = 'hidden'
-})
-
-closePopupButton.addEventListener('click', function () {
-  popup.classList.remove('menu-wrapper--modal-show')
-  closePopupButton.classList.add('visually-hidden')
-  menu.classList.remove('menu--modal-menu')
-  body.style.overflow = 'auto'
-})
-
-document.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    popup.classList.remove('menu-wrapper--modal-show')
-    closePopupButton.classList.add('visually-hidden')
-    menu.classList.remove('menu--modal-menu')
-    body.style.overflow = 'auto'
-  }
-})
-
-transparentClick.addEventListener('click', function () {
-  popup.classList.remove('menu-wrapper--modal-show')
-  closePopupButton.classList.add('visually-hidden')
-  menu.classList.remove('menu--modal-menu')
-  body.style.overflow = 'auto'
 })
