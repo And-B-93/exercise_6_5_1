@@ -409,9 +409,7 @@ main {
 }
 
 .icon-btn {
-  background-image: url('../img/expand.svg');
-  height: 24px;
-  width: 24px;
+  background-size: cover;
   transition-duration: var(--transition-duration);
 
   &--reverse {
