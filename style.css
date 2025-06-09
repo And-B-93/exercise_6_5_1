@@ -662,9 +662,7 @@ main {
     width: 88px; }
 
 .icon-btn {
-  background-image: url(./static/expand.svg);
-  height: 24px;
-  width: 24px;
+  background-size: cover;
   transition-duration: var(--transition-duration); }
   .icon-btn--reverse {
     transform: rotate(180deg);
