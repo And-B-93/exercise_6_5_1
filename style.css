@@ -768,7 +768,7 @@ main {
         display: flex;
         flex-direction: column;
         width: 34%;
-        padding: 0 0 20px 0; }
+        padding: 0 0 33px 0; }
         .price-list .description-price--block-nonmobile .time .title {
           height: 50px;
           color: var(--color-grey);
