@@ -60,6 +60,9 @@
     overflow: hidden;
     transition-duration: var(--transition-duration); } }
 
+.transparent--none {
+  display: none !important; }
+
 @media (max-width: 1365px) {
   .interactiv-buttons__visible-laptop {
     display: none !important; } }
@@ -206,11 +209,13 @@
       margin-bottom: 16px !important; } }
 
 @media (max-width: 320px) {
-  .button--burger-close-callback, .button--burger-close-feedback {
+  .button--burger-close-callback,
+  .button--burger-close-feedback {
     position: static !important; } }
 
 @media (max-width: 520px) {
-  .button--burger-close-callback, .button--burger-close-feedback {
+  .button--burger-close-callback,
+  .button--burger-close-feedback {
     position: static !important; } }
 
 @media (max-width: 767px) {
@@ -265,7 +270,8 @@
   left: -80px;
   background-image: url(./static/burger_close.svg); }
 
-form .submit, .time__description .submit {
+form .submit,
+.time__description .submit {
   position: absolute !important;
   right: 10px !important; }
 
