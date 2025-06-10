@@ -15,6 +15,7 @@ let body = document.querySelector('body')
 
 openPopupButton.addEventListener('click', function (evt) {
   evt.preventDefault()
+  transparentClickMenu.classList.remove('transparent--none')
   popup.classList.add('menu-wrapper--modal-show')
   closePopupButton.classList.remove('visually-hidden')
   menu.classList.add('menu--modal-menu')
@@ -23,22 +24,15 @@ openPopupButton.addEventListener('click', function (evt) {
 
 closePopupButton.addEventListener('click', function () {
   popup.classList.remove('menu-wrapper--modal-show')
+  transparentClickMenu.classList.add('transparent--none')
   closePopupButton.classList.add('visually-hidden')
   menu.classList.remove('menu--modal-menu')
   body.style.overflow = 'auto'
 })
 
-document.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    popup.classList.remove('menu-wrapper--modal-show')
-    closePopupButton.classList.add('visually-hidden')
-    menu.classList.remove('menu--modal-menu')
-    body.style.overflow = 'auto'
-  }
-})
-
 transparentClickMenu.addEventListener('click', function () {
   popup.classList.remove('menu-wrapper--modal-show')
+  transparentClickMenu.classList.add('transparent--none')
   closePopupButton.classList.add('visually-hidden')
   menu.classList.remove('menu--modal-menu')
   body.style.overflow = 'auto'
@@ -70,6 +64,8 @@ for (let i = 0; i < openPopupButtonFeedback.length; i++) {
     popup.classList.remove('menu-wrapper--modal-show')
     menu.classList.remove('menu--modal-menu')
     closePopupButton.classList.add('visually-hidden')
+    const scrollY = window.scrollY || window.pageYOffset
+    popupFeedback.style.top = scrollY + 0 + 'px'
     body.style.overflow = 'hidden'
   })
 
@@ -83,7 +79,7 @@ for (let i = 0; i < openPopupButtonFeedback.length; i++) {
     popupFeedback.classList.remove('feedback--modal-show')
     popupFeedback.classList.add('visually-hidden')
     body.style.overflow = 'auto'
-})
+  })
 }
 
 for (let i = 0; i < openPopupButtonCallback.length; i++) {
@@ -94,6 +90,8 @@ for (let i = 0; i < openPopupButtonCallback.length; i++) {
     popup.classList.remove('menu-wrapper--modal-show')
     menu.classList.remove('menu--modal-menu')
     closePopupButton.classList.add('visually-hidden')
+    const scrollY = window.scrollY || window.pageYOffset
+    popupCallback.style.top = scrollY + 0 + 'px'
     body.style.overflow = 'hidden'
   })
 
